@@ -1,6 +1,6 @@
-﻿namespace Desafio.Model
+﻿namespace Desafio.DTO.Produto
 {
-    public class Produto
+    public class ProdutoUpdateDto
     {
         public long Id { get; set; }
         public string Nome { get; set; }

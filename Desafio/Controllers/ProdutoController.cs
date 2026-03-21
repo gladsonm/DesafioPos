@@ -1,3 +1,4 @@
+using Desafio.DTO.Produto;
 using Desafio.Model;
 using Desafio.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
@@ -16,58 +17,84 @@ namespace Desafio.Controllers
         }
 
         [HttpPost("Criar")]
-        public async Task<IActionResult> Criar([FromBody] Produto produto)
+        public async Task<IActionResult> Criar([FromBody] ProdutoCreateDto dto)
         {
-            if (produto.Id < 1)
+            var produto = new Produto
             {
-                var produtos = await _service.ListarAsync();
-                var ultimo = produtos.OrderByDescending(p => p.Id).FirstOrDefault();
-                if (ultimo != null)
-                {
-                    produto.Id = ultimo.Id + 1;
-                }
-                else
-                {
-                    produto.Id = 1;
-                }
+                Nome = dto.Nome,
+                PrecoCompra = dto.PrecoCompra,
+                PrecoVenda = dto.PrecoVenda
+            };
+
+            var produtos = await _service.ListarAsync();
+            var ultimo = produtos.OrderByDescending(p => p.Id).FirstOrDefault();
+            if (ultimo != null)
+            {
+                produto.Id = ultimo.Id + 1;
             }
-            var registro = await _service.ObterPorIdAsync(produto.Id);
-            if (registro != null) {
-                throw new ArgumentException("Produto já Cadastrado");
+            else
+            {
+                produto.Id = 1;
             }
 
             var resultado = await _service.CriarAsync(produto);
-            return CreatedAtAction(nameof(ObterPorId), new { id = resultado.Id }, resultado);
+
+            return Ok(new ProdutoResponseDto
+            {
+                Id = resultado.Id,
+                Nome = resultado.Nome,
+                PrecoVenda = resultado.PrecoVenda
+            });
         }
 
         [HttpGet("Listar")]
         public async Task<IActionResult> Listar()
         {
-            var lista = await _service.ListarAsync();
-            return Ok(lista);
+            var produtos = await _service.ListarAsync();
+
+            var resultado = produtos.Select(p => new ProdutoResponseDto
+            {
+                Id = p.Id,
+                Nome = p.Nome,
+                PrecoVenda = p.PrecoVenda
+            });
+
+            return Ok(resultado);
         }
 
         [HttpGet("ObterPorId/{id}")]
-        public async Task<IActionResult> ObterPorId([FromRoute] int id)
+        public async Task<IActionResult> ObterPorId([FromRoute] long id)
         {
             var produto = await _service.ObterPorIdAsync(id);
 
             if (produto == null)
                 return NotFound();
 
-            return Ok(produto);
+            return Ok(new ProdutoResponseDto
+            {
+                Id = produto.Id,
+                Nome = produto.Nome,
+                PrecoVenda = produto.PrecoVenda
+            });
         }
 
         [HttpGet("ObterPorNome")]
         public async Task<IActionResult> ObterPorNome([FromQuery] string nome)
         {
-            var produto = await _service.ObterPorNomeAsync(nome);
+            var produtos = await _service.ObterPorNomeAsync(nome);
 
-            return Ok(produto);
+            var resultado = produtos.Select(p => new ProdutoResponseDto
+            {
+                Id = p.Id,
+                Nome = p.Nome,
+                PrecoVenda = p.PrecoVenda
+            });
+
+            return Ok(resultado);
         }
 
         [HttpGet("Contar")]
-        public async Task<IActionResult> Contar([FromRoute] int id)
+        public async Task<IActionResult> Contar()
         {
             var produtos = await _service.ListarAsync();
 
@@ -78,21 +105,31 @@ namespace Desafio.Controllers
         }
 
         [HttpPut("Update/{id}")]
-        public async Task<IActionResult> Atualizar(int id, [FromBody] Produto produto)
+        public async Task<IActionResult> Atualizar(long id, [FromBody] ProdutoUpdateDto dto)
         {
-            if (id != produto.Id)
-                return BadRequest("ID da rota diferente do modelo");
+            if (id != dto.Id)
+                return BadRequest();
 
-            var existente = await _service.ObterPorIdAsync(id);
-            if (existente == null)
-                return NotFound();
+            var produto = new Produto
+            {
+                Id = dto.Id,
+                Nome = dto.Nome,
+                PrecoCompra = dto.PrecoCompra,
+                PrecoVenda = dto.PrecoVenda
+            };
 
             var atualizado = await _service.AtualizarAsync(produto);
-            return Ok(atualizado);
+
+            return Ok(new ProdutoResponseDto
+            {
+                Id = atualizado.Id,
+                Nome = atualizado.Nome,
+                PrecoVenda = atualizado.PrecoVenda
+            });
         }
 
         [HttpDelete("Delete/{id}")]
-        public async Task<IActionResult> Deletar(int id)
+        public async Task<IActionResult> Deletar(long id)
         {
             var deletado = await _service.DeletarAsync(id);
 

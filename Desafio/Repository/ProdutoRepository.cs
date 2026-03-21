@@ -33,7 +33,7 @@ namespace Desafio.Repository
 
         public async Task<List<Produto>?> ObterPorNomeAsync(string nome)
         {
-            return await _context.Produtos.Where(x=>x.Descricao.ToLower().Contains(nome.ToLower())).ToListAsync();
+            return await _context.Produtos.Where(x=>x.Nome.ToLower().Contains(nome.ToLower())).ToListAsync();
         }
 
         public async Task<Produto> AtualizarAsync(Produto produto)

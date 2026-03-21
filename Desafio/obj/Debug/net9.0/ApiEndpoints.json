@@ -6,13 +6,7 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -24,8 +18,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "produto",
-        "Type": "Desafio.Model.Produto",
+        "Name": "dto",
+        "Type": "Desafio.DTO.Produto.ProdutoCreateDto",
         "IsRequired": true
       }
     ],
@@ -41,7 +35,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],
@@ -67,7 +61,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],
@@ -99,12 +93,12 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Int64",
         "IsRequired": true
       },
       {
-        "Name": "produto",
-        "Type": "Desafio.Model.Produto",
+        "Name": "dto",
+        "Type": "Desafio.DTO.Produto.ProdutoUpdateDto",
         "IsRequired": true
       }
     ],

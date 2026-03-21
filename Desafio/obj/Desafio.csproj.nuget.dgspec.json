@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio\\Desafio\\Desafio.csproj": {}
+    "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio Pos\\DesafioPos\\Desafio\\Desafio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio\\Desafio\\Desafio.csproj": {
+    "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio Pos\\DesafioPos\\Desafio\\Desafio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio\\Desafio\\Desafio.csproj",
+        "projectUniqueName": "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio Pos\\DesafioPos\\Desafio\\Desafio.csproj",
         "projectName": "Desafio",
-        "projectPath": "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio\\Desafio\\Desafio.csproj",
+        "projectPath": "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio Pos\\DesafioPos\\Desafio\\Desafio.csproj",
         "packagesPath": "C:\\Users\\glads\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio\\Desafio\\obj\\",
+        "outputPath": "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio Pos\\DesafioPos\\Desafio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -58,6 +58,10 @@
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[9.0.14, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[10.1.5, )"
             }
           },
           "imports": [

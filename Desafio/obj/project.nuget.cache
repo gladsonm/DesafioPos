@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "ARSE4uy5uE0=",
+  "dgSpecHash": "WDrgvV+CCzk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio\\Desafio\\Desafio.csproj",
+  "projectFilePath": "C:\\Users\\glads\\OneDrive\\Documentos\\Desafio Pos\\DesafioPos\\Desafio\\Desafio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\glads\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.14\\microsoft.entityframeworkcore.9.0.14.nupkg.sha512",
     "C:\\Users\\glads\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.14\\microsoft.entityframeworkcore.abstractions.9.0.14.nupkg.sha512",
     "C:\\Users\\glads\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.14\\microsoft.entityframeworkcore.analyzers.9.0.14.nupkg.sha512",
     "C:\\Users\\glads\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\9.0.14\\microsoft.entityframeworkcore.inmemory.9.0.14.nupkg.sha512",
+    "C:\\Users\\glads\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
     "C:\\Users\\glads\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.14\\microsoft.extensions.caching.abstractions.9.0.14.nupkg.sha512",
     "C:\\Users\\glads\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.14\\microsoft.extensions.caching.memory.9.0.14.nupkg.sha512",
     "C:\\Users\\glads\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.14\\microsoft.extensions.dependencyinjection.9.0.14.nupkg.sha512",
@@ -15,7 +16,13 @@
     "C:\\Users\\glads\\.nuget\\packages\\microsoft.extensions.logging\\9.0.14\\microsoft.extensions.logging.9.0.14.nupkg.sha512",
     "C:\\Users\\glads\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.14\\microsoft.extensions.logging.abstractions.9.0.14.nupkg.sha512",
     "C:\\Users\\glads\\.nuget\\packages\\microsoft.extensions.options\\9.0.14\\microsoft.extensions.options.9.0.14.nupkg.sha512",
-    "C:\\Users\\glads\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.14\\microsoft.extensions.primitives.9.0.14.nupkg.sha512"
+    "C:\\Users\\glads\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.14\\microsoft.extensions.primitives.9.0.14.nupkg.sha512",
+    "C:\\Users\\glads\\.nuget\\packages\\microsoft.openapi\\2.4.1\\microsoft.openapi.2.4.1.nupkg.sha512",
+    "C:\\Users\\glads\\.nuget\\packages\\swashbuckle.aspnetcore\\10.1.5\\swashbuckle.aspnetcore.10.1.5.nupkg.sha512",
+    "C:\\Users\\glads\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.1.5\\swashbuckle.aspnetcore.swagger.10.1.5.nupkg.sha512",
+    "C:\\Users\\glads\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.1.5\\swashbuckle.aspnetcore.swaggergen.10.1.5.nupkg.sha512",
+    "C:\\Users\\glads\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.1.5\\swashbuckle.aspnetcore.swaggerui.10.1.5.nupkg.sha512",
+    "C:\\Users\\glads\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512"
   ],
   "logs": []
 }

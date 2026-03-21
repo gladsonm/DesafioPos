@@ -1,8 +1,7 @@
-﻿namespace Desafio.Model
+﻿namespace Desafio.DTO.Produto
 {
-    public class Produto
+    public class ProdutoCreateDto
     {
-        public long Id { get; set; }
         public string Nome { get; set; }
         public decimal PrecoCompra { get; set; }
         public decimal PrecoVenda { get; set; }
