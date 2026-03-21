@@ -1,0 +1,113 @@
+[
+  {
+    "ContainingType": "Desafio.Controllers.ProdutoController",
+    "Method": "Contar",
+    "RelativePath": "api/Produto/Contar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Desafio.Controllers.ProdutoController",
+    "Method": "Criar",
+    "RelativePath": "api/Produto/Criar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "produto",
+        "Type": "Desafio.Model.Produto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Desafio.Controllers.ProdutoController",
+    "Method": "Deletar",
+    "RelativePath": "api/Produto/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Desafio.Controllers.ProdutoController",
+    "Method": "Listar",
+    "RelativePath": "api/Produto/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Desafio.Controllers.ProdutoController",
+    "Method": "ObterPorId",
+    "RelativePath": "api/Produto/ObterPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Desafio.Controllers.ProdutoController",
+    "Method": "ObterPorNome",
+    "RelativePath": "api/Produto/ObterPorNome",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Desafio.Controllers.ProdutoController",
+    "Method": "Atualizar",
+    "RelativePath": "api/Produto/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "produto",
+        "Type": "Desafio.Model.Produto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
