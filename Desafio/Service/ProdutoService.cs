@@ -1,4 +1,5 @@
-﻿using Desafio.Model;
+﻿using Desafio.DTO.Produto;
+using Desafio.Model;
 using Desafio.Repository.Interface.Produto;
 using Desafio.Service.Interface;
 
@@ -13,9 +14,27 @@ namespace Desafio.Service
             _repository = repository;
         }
 
-        public async Task<Produto> CriarAsync(Produto produto)
+        public async Task<Produto> CriarAsync(ProdutoCreateDto produtoCreateDto)
         {
-            // ponto ideal para regra de negócio
+
+            var produto = new Produto
+            {
+                Nome = produtoCreateDto.Nome,
+                PrecoCompra = produtoCreateDto.PrecoCompra,
+                PrecoVenda = produtoCreateDto.PrecoVenda
+            };
+
+            var produtos = await ListarAsync();
+            var ultimo = produtos.OrderByDescending(p => p.Id).FirstOrDefault();
+            if (ultimo != null)
+            {
+                produto.Id = ultimo.Id + 1;
+            }
+            else
+            {
+                produto.Id = 1;
+            }
+
             return await _repository.CriarAsync(produto);
         }
 

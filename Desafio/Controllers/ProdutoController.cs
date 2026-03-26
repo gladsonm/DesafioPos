@@ -17,27 +17,9 @@ namespace Desafio.Controllers
         }
 
         [HttpPost("Criar")]
-        public async Task<IActionResult> Criar([FromBody] ProdutoCreateDto dto)
+        public async Task<IActionResult> Criar([FromBody] ProdutoCreateDto produtoCreateDto)
         {
-            var produto = new Produto
-            {
-                Nome = dto.Nome,
-                PrecoCompra = dto.PrecoCompra,
-                PrecoVenda = dto.PrecoVenda
-            };
-
-            var produtos = await _service.ListarAsync();
-            var ultimo = produtos.OrderByDescending(p => p.Id).FirstOrDefault();
-            if (ultimo != null)
-            {
-                produto.Id = ultimo.Id + 1;
-            }
-            else
-            {
-                produto.Id = 1;
-            }
-
-            var resultado = await _service.CriarAsync(produto);
+            var resultado = await _service.CriarAsync(produtoCreateDto);
 
             return Ok(new ProdutoResponseDto
             {
